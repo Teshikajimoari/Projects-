@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+  <main language="en">
+  <main charset="utf-8">
+  <head>
+    <title>Technical documentation</title>
+    </head>
+ 
+  <body>
+       <link rel="stylesheet" href="Style.css" type="text/css">
+    <nav id="navbar">
+      <header class="header">
+        Fortran 95 Documentation
+        </header>
+        <ul>
+          <li>
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        </li>
+         <li>
+        <a href="#Hello_Word" class="nav-link">Hello Word</a>
+        </li>
+         <li>
+        <a href="#Variables" class="nav-link">Variables</a>
+        </li>
+         <li>
+        <a href="#Types_of_variables" class="nav-link">Types of variables</a>
+        </li>
+        <li>
+        <a href="#Declaring_variables" class="nav-link">Declaring variables</a>
+        </li>
+        <li>
+        <a href="#if_statement" class="nav-link">if statement</a>
+        </li>
+        <li>
+        <a href="#Repetitive_instructions" class="nav-link">Repetitive instructions</a>
+        </li>
+        <li>
+        <a href="#while_statement" class="nav-link">while statement</a>
+        </li>
+        <li>
+        <a href="#Logical_expression" class="nav-link">Logical expression</a>
+       <li>
+        <a href="#Reference" class="nav-link">Reference</a>
+        </li>
+         </ul>
+    </nav>
+    
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header >
+          Introduction
+          </header>
+          <article>
+    <p> Brought to you by ANSI committee X3J3 and ISO-IEC/JTC1/SC22/WG5 (Fortran)
+  </p>
+  <p> 
+  This is neither complete nor precisely accurate, but hopefully, after
+  a small investment of time it is easy to read and very useful.
+</p>
+<p>
+  This is the free form version of Fortran, no statement numbers,
+  no C in column 1, start in column 1 (not column 7),
+  typically indent 2, 3, or 4 spaces per each structure.
+  The typical extension is  .f90  .
+  </p>
+  <p>
+    Continue a statement on the next line by ending the previous line with
+  an ampersand  & .  Start the continuation with  &  for strings.
+
+  The rest of any line is a comment starting with an exclamation mark  ! .
+  </p>
+  <p> Put more than one statement per line by separating statements with a
+  semicolon  ; . Null statements are OK, so lines can end with semicolons.
+
+  Separate words with space or any form of "white space" or punctuation.
+  </p>
+ 
+          </article>
+          
+          </section>
+          <section class="main-section" id="Hello_Word">
+        <header >
+          Hello Word
+          </header>
+          <article>
+            <p>To get started with writing Fortran95, open the Compiler and write your first "Hello world" Fortran95 code:
+<code>Program Hello_Word
+  <br>
+  implicite none
+  <br>
+  write(*,*)"Hello Word"
+  <br>
+  END PROGRAM
+  </code>
+  <p>Select the code in the pad and compile to watch it unfold in your browser!</p>
+          </article>
+          
+          </section>
+          <section class="main-section" id="Variables">
+        <header >
+        Variables
+          </header>
+          <article>
+            <p>Variabla reprezinta o zona de memorie in care se stocheza
+valorea unei date.</p>
+<p>Zona de memorie este caracterizata de o pozitie de
+inceput si o marime.
+Marimea zonei alocate unei variabile poate sa fie mai
+mare sau mai mica in functie de tipul de data.</p>
+<p>In interiorul unui program fiecare variabila trebuie sa fieidentificata un nume unic care trebuie sa inceapa cu olitera. Numele unui variable poate insa sa contine si cifresau caractere speciale (exemplu _ ).</p>
+<p>In functie de compilator se poate face distinctia intre litere
+mari si litere mici. 
+</p>
+<code>
+  contor_i Contor_i
+  </code>
+  <p>Poate sa reprezinta o acceasi variabla sau doua variabile
+distincte.
+In general fortran-ul nu face diferenta intre litere mai si
+mici insa in C sau C++ aceasta diferenta se face.</p>
+          </article>
+          
+          </section>
+          <section class="main-section" id="Types_of_variables">
+        <header >
+          Types of variables
+          </header>
+         <article>
+           <p>In fortran95 there are 5 types of variables and this are:</p>
+          <ul>
+            <li>integer</li>
+            <li>real</li>
+            <li>complex</li>
+            <li>character</li>
+            <li>logical(.true./.false.)</li>
+</ul>
+           </article>
+          
+          </section>
+          <section class="main-section" id="Declaring_variables">
+        <header >
+          Declaring variables
+           </header>
+          <article>
+            <p>Here are some examplex of how you can declare some variables:</p>
+            <code>
+              integer i,j,a
+              <br>
+              i=0
+              <br>
+              j=1
+              <br>
+              real n,m
+              <br>
+              read(*,*)n,m
+          <br>
+          character nume_oras
+          <br>
+     a=1
+     <br>
+     nume_oras="Constanta
+
+
+              </code>
+          </article>
+         
+          </section>
+          
+          <section class="main-section" id="if_statement">
+        <header >
+          if statement
+          </header>
+          <article>
+          <p>Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:</p>
+          <code>
+            if (condition) then 
+            <br>
+statement_1
+<br>
+else
+<br>
+statement_2
+<br>
+endif
+</code>
+<p>condition can be any expression that evaluates to true or false. See Boolean for an explanation of what evaluates to true and false. If condition evaluates to true, statement_1 is executed; otherwise, statement_2 is executed. statement_1 and statement_2 can be any statement, including further nested if statements.</p>
+<p>You may also compound the statements using else if to have multiple conditions tested in sequence, as follows:</p>
+<code>
+if (condition_1)then 
+<br>
+statement_1 
+<br>
+else if (condition_2) 
+<br>
+statement_2 
+<br>
+ else if (condition_n) 
+ <br>
+  statement_n
+  <br> 
+  else 
+  <br>
+statement_last
+<br>
+endif
+  </code>
+  <p>It is advisable to not use simple assignments in a conditional expression, because the assignment can be confused with equality when glancing over the code. For example, do not use the following code:</p>
+  <code>
+    if (x = y) then
+    <br>
+    /* statements here */
+    <br>
+    endif
+    </code>
+            </article>
+          </section>
+          <section class="main-section" id="Repetitive_instructions">
+        <header >
+          Repetitive instructions
+          </header>
+          <article>
+            <p>Repetition structures, or loops, are used when a program needs to repeatedly process one or more instructions until some condition is met, at which time the loop ends. Many programming tasks are repetitive, having little variation from one item to the next. The process of performing the same task over and over again is called iteration, and C++ provides built-in iteration functionality. A loop executes the same section of program code over and over again, as long as a loop condition of some sort is met with each iteration. This section of code can be a single statement or a block of statements (a compound statement). Loops and Using Loops.</p>
+            <ul>
+              <li>Repetition allows the programmer to efficiently use variables</li>
+              <li>Can structure programming statements to be repeated as long as specific conditions are met</li>
+              <li>For example: can input, add, and average multiple numbers using limited number of variables</li>
+              <li>Mnemonic: "ALL loops must have ITU"--Initialize, Test, Update
+</li>
+         <code>
+           do contor: v_start , v_end , v_step
+           <br>
+multiple_statements
+<br>
+enddo
+</code>
+            </article>
+          
+          </section>
+          <section class="main-section" id="while_statement">
+        <header >
+          while statement
+           </header>
+          <article>
+            <p>A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows:</p>
+            <code>
+              do while (condition) 
+              <br>
+              statement
+              <br>
+              enddo
+              </code>
+              <p>If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop.</p>
+              <p>The condition test occurs before statement in the loop is executed. If the condition returns true, statement is executed and the condition is tested again. If the condition returns false, execution stops and control is passed to the statement following while.</p>
+              <p>To execute multiple statements, use a block statement ({ ... }) to group those statements.</p>
+              <p>Example:</p>
+              <p>
+The following while loop iterates as long as n is less than three:</p>
+<code>
+  integer n,x
+  <br>
+   n = 0 
+   <br>
+   x = 0
+   <br>
+    do while(n < 3)  
+    <br>
+    n=n+1 
+    <br>
+    x=x +n
+    <br>
+    enddo
+    </code>
+    <p>With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the following values:</p>
+    <ul>
+      <li>After the first pass: n = 1 and x = 1</li>
+      <li>After the second pass: n = 2 and x = 3</li>
+      <li>After the third pass: n = 3 and x = 6</li>
+      </ul>
+      <p>After completing the third pass, the condition n < 3 is no longer true, so the loop terminates.</p>
+
+          </article>
+         
+          </section>
+          <section class="main-section" id="Logical_expression">
+        <header >
+          Logical expression
+           </header>
+          <article>
+            <p>O expresie logica este o expresie matematica al carei
+rezultat poate sa fie adevarat sau fals si poate sacorespunde valorilor 1 sau 0.</p>
+<p>In expresiile logice se pot folosi:</p>
+<ul>
+  <li>operatori numerici</li>
+  <li>operatori de comparatie</li>
+  <li>operatori logici</li>
+  </ul>
+  <p><strong>Operatori numerici</strong></p>
+  <br>
+  <p>n expresiile numerice se pot folosii urmatorii operatori:
+    <br>
+adunare: +
+<br>
+scadere: -
+<br>
+inmultire *
+<br>
+inpartire /</p>
+<p>In Fortran exista operatorul de ridicare la putere: **
+r=3**5 corespunde r = 243</p>
+<br>
+<p><strong>Operatori de comparatie</strong></p>
+<table style="border:1px solid;">
+  <tr >
+    <th style="border:1px solid;">FORTRAN</th>
+    </tr>
+    <tr>
+      <td style="border:1px solid;">.EQ.==</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid;">.NE. /=</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid;">
+      .GT. ></td>
+      </tr>
+      <tr>
+        <td style="border:1px solid;">.GE. >=</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid;">.LT. < </td>
+          </tr>
+          <tr>
+            <td style="border:1px solid;">
+             .LE. <=</td>
+             </tr> 
+      </table>
+      <br>
+      <p><strong>Operatori logici</strong></p>
+      <table style="border:1px solid;">
+  <tr >
+    <th style="border:1px solid;">FORTRAN</th>
+    </tr>
+    <tr>
+      <td style="border:1px solid;">.AND.</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid;">.OR.</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid;">
+      .NOT.</td>
+      </tr>
+      </table>
+
+            </article>
+         
+          </section>
+          
+          <section class="main-section" id="Reference">
+        <header >
+          Reference
+          </header> 
+          <article>
+          <p>All the documentation in this page is taken from <a href="https://www.fortran90.org/" target="_blank">Fortran95</a> </p>
+         </article>
+          </section>
+      
+    </main>
+    
+  </body>
+
+</html>

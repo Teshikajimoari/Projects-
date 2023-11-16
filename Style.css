@@ -1,0 +1,107 @@
+<style>
+body {
+    line-height: 1.5;
+}
+
+.header {
+    color: #000;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+header {
+    color: #000;
+    font-size: 20px;
+    text-align: left;
+    margin: 0px;
+    font-weight: 900;
+}
+
+nav {
+    display: block;
+}
+
+#navbar {
+    position: fixed;
+    width: 245px;
+    height: 100%;
+    font-family: Arial;
+    font-size: 22px;
+    color: #999;
+    border-right: solid;
+}
+
+#navbar a {
+    display: block;
+    padding: 7px 20px;
+    color: #555;
+    text-decoration: none;
+}
+
+p {
+    display: block;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#navbar ul {
+    padding: 0px;
+}
+
+#navbar li {
+    position: relative;
+    width: 100%;
+    color: #000;
+    border-top: 1px solid;
+    list-style: none;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+main {
+    display: block;
+}
+
+#main-doc {
+    position: absolute;
+    margin-left: 255px;
+    padding: 20px;
+    margin-bottom: 110px;
+}
+
+.nav-link {
+    color: #333;
+    width: 100%;
+}
+
+section {
+    display: block;
+}
+
+code {
+    display: block;
+    padding: 20px;
+    line-height: 15px;
+    margin: 10px;
+    position: relative;
+    text-align: left;
+    border-radius: 5px;
+    background-color: #A9A9A9;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    #navbar a {
+        display: block;
+        padding: 0px 20px;
+        color: #555;
+        text-decoration: none;
+    }
+}
+
+</style>
